@@ -1,0 +1,12 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: pingpong-eureka-server #注册中心应用名称
+eureka:
+  client:
+    register-with-eureka: false #是否注册自己的信息到EurekaServer，默认是true
+    fetch-registry: false #是否拉取其它服务的信息，默认是true
+    service-url: # EurekaServer的地址
+      defaultZone: http://localhost:${server.port}/eureka
+

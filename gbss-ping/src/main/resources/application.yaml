@@ -1,0 +1,12 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: gbss-ping
+eureka:
+  instance:
+    ip-address: 127.0.0.1 #指定本项目的ip
+    instance-id: ${eureka.instance.ip-address}:${server.port} #实例配置
+  client:
+    service-url: #EurekaServer 地址
+      defaultZone: http://localhost:8085/eureka
