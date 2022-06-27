@@ -1,6 +1,6 @@
 package com.gbss.pong;
 
-import com.gbss.pong.constants.ReadFileNameConstants;
+import com.gbss.commoncore.constants.FileNameConstants;
 import com.gbss.pong.disruptor.service.DisruptorMqService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +28,7 @@ class PongApplicationTests {
 
     @Test
     void testDisruptorMq() {
-        disruptorMqService.produceMessageMQ(ReadFileNameConstants.PONG_FILE_READ_NAME+"ping__20220625115735.txt");
+        disruptorMqService.produceMessageMQ(FileNameConstants.PONG_FILE_READ_NAME+"ping__20220625115735.txt");
 
     }
 }

@@ -15,10 +15,9 @@
     <description>pong project for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>
-        <lombok.version>1.18.16</lombok.version>
         <spring-cloud.version>2021.0.3</spring-cloud.version>
-        <disrutor.version>3.3.4</disrutor.version>
         <jacoco.version>0.8.7</jacoco.version>
+        <disrutor.version>3.3.4</disrutor.version>
     </properties>
     <dependencies>
 
@@ -41,23 +40,21 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-        </dependency>
-
         <dependency>
             <groupId>org.jacoco</groupId>
             <artifactId>jacoco-maven-plugin</artifactId>
             <version>${jacoco.version}</version>
         </dependency>
-
         <dependency>
             <groupId>com.lmax</groupId>
             <artifactId>disruptor</artifactId>
             <version>${disrutor.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.gbss</groupId>
+            <artifactId>common-core</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
     </dependencies>

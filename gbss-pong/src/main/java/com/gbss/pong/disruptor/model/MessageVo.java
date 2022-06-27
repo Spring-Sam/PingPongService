@@ -1,6 +1,8 @@
 package com.gbss.pong.disruptor.model;
 
 
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * <p>
@@ -10,27 +12,14 @@ package com.gbss.pong.disruptor.model;
  * @author hjzhou
  * @since 2022/6/25
  */
+@Getter
+@Setter
 public class MessageVo {
 
     private String code;
 
     private String value;
 
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
 
 
 }

@@ -1,5 +1,6 @@
 package com.gbss.ping.service.impl;
 
+import com.gbss.commoncore.constants.FileNameConstants;
 import com.gbss.ping.feign.HelloPongFeignService;
 import com.gbss.ping.service.BasicTextService;
 import com.gbss.ping.utils.DateUtils;
@@ -40,7 +41,7 @@ public class BasicTextServiceImpl implements BasicTextService {
             //写入
             String text = "ping__hello_" + DateUtils.dateTimeNow();
             String fileName = "ping__" + DateUtils.dateTimeNow() + ".txt";
-            writeStrtoFile(text, "/Users/hjzhou/Documents/myCode/txtFolder", fileName);
+            writeStrtoFile(text,  FileNameConstants.PONG_FILE_READ_NAME, fileName);
             //通知pong service
             Future future = executorService.submit(() -> (String) helloPongFeignService.helloPongRead(fileName));
             result = (String) future.get();

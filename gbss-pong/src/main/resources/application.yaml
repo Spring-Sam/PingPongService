@@ -3,6 +3,9 @@ server:
 spring:
   application:
     name: gbss-pong
+  mvc:  #springBoot版本太高，缺少swagger运行环境,增加配置兼容
+    pathmatch:
+      matching-strategy: ant_path_matcher
 eureka:
   instance:
     ip-address: 127.0.0.1
