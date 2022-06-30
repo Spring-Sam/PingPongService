@@ -12,5 +12,5 @@ import java.util.concurrent.ExecutionException;
  */
 public interface BasicTextService {
 
-    String getShowText() throws ExecutionException, InterruptedException;
+    String getShowText();
 }

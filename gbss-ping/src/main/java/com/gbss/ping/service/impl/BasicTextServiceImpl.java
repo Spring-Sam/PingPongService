@@ -34,7 +34,7 @@ public class BasicTextServiceImpl implements BasicTextService {
 
 
     @Override
-    public String getShowText() throws ExecutionException, InterruptedException {
+    public String getShowText()  {
         String result = "";
         ExecutorService executorService = Executors.newSingleThreadExecutor();
         try {
